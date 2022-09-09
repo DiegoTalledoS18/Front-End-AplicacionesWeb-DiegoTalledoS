@@ -11,6 +11,7 @@ import Calendar from 'primevue/calendar';
 import RadioButton from 'primevue/radiobutton';
 import Checkbox from 'primevue/checkbox';
 import Textarea from 'primevue/textarea';
+import i18n from "@/locales/i18n";
 
 
 import "primevue/resources/themes/bootstrap4-light-blue/theme.css"       //theme
@@ -18,7 +19,7 @@ import "primevue/resources/primevue.min.css"                 //core css
 import "primeicons/primeicons.css"                         //icons
 import "/node_modules/primeflex/primeflex.css"
 const app = createApp(App);
-
+app.use(i18n)
 
 app.use(PrimeVue);
 app.component('Button', Button);

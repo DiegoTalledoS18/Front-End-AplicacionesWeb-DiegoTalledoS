@@ -35,20 +35,26 @@ export default {
 <template>
   <form action="">
 
-
+    <h1>
+      {{ $t("greeting",{name:"diego"}) }}
+    </h1>
+    <h3>
+      {{$tc("product",2)}}
+    </h3>
     <div class="card">
 
       <div class="field grid">
-        <label for="code" class="col-12 mb-2 md:col-1 md:mb-0" >Codigo* </label>
+        <label for="code" class="col-12 mb-2 md:col-1 md:mb-0" >{{$t("code")}} </label>
         <div class="col-12 md:col-10">
           <input-text id="code" v-model="codigo"/>
           <Button class="ml-3" label="Validar"/>
         </div>
 
       </div>
+
       <div class="field grid">
 
-        <label for="nombre" class="col-12 mb-2 md:col-1 md:mb-0" >Nombre*</label>
+        <label for="nombre" class="col-12 mb-2 md:col-1 md:mb-0" >{{$t("name")}} </label>
         <div class="col-12 md:col-10">
           <input-text id="nombre" placeholder="Solo letras y numeros" v-model="nombre"></input-text>
         </div>
@@ -57,7 +63,7 @@ export default {
 
       <div class="field grid">
 
-        <label for="abreviatura" class="col-12 mb-2 md:col-1 md:mb-0" >Abreviatura*</label>
+        <label for="abreviatura" class="col-12 mb-2 md:col-1 md:mb-0" >{{ $t("phone") }}</label>
         <div class="col-12 md:col-10">
           <input-text id="abreviatura" placeholder="Solo letras " v-model="abreviatura"></input-text>
         </div>
